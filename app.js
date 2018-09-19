@@ -2,6 +2,7 @@
 const Hapi = require('hapi')
 const config = require('./config')
 const helloRoutes = require('./routes/hello')
+const plugins = require('./plugins')
 
 const server = Hapi.server({
   host: config.host,
@@ -13,8 +14,8 @@ server.route([
 ])
 
 const init = async () => {
+  await server.register(plugins)
   await server.start()
-  console.log(`Server running at: ${server.info.uri}`)
 }
 
 process.on('unhandledRejection', err => {
