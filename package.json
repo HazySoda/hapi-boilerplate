@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./app.js",
-    "lint": "standard"
+    "lint": "standard",
+    "sequelize": "sequelize"
   },
   "repository": {
     "type": "git",
@@ -33,13 +34,16 @@
   },
   "dependencies": {
     "env2": "^2.2.2",
-    "hapi": "^17.5.4"
+    "hapi": "^17.5.4",
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.38.1"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
     "husky": "^1.0.0-rc.14",
     "lint-staged": "^7.2.2",
     "nodemon": "^1.18.4",
+    "sequelize-cli": "^4.1.1",
     "standard": "^12.0.1"
   }
 }

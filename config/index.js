@@ -13,5 +13,13 @@ const { env } = process
 
 module.exports = {
   host: env.SERVER_HOST,
-  port: env.SERVER_PORT
+  port: env.SERVER_PORT,
+  mysql: {
+    dialect: 'mysql',
+    host: env.MYSQL_HOST,
+    port: env.MYSQL_PORT,
+    username: env.MYSQL_USERNAME,
+    password: env.MYSQL_PASSWORD,
+    database: env.MYSQL_DB_NAME
+  }
 }
