@@ -32,6 +32,7 @@
     ]
   },
   "dependencies": {
+    "env2": "^2.2.2",
     "hapi": "^17.5.4"
   },
   "devDependencies": {

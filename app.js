@@ -1,9 +1,10 @@
 'use strict'
 const Hapi = require('hapi')
+const config = require('./config')
 
 const server = Hapi.server({
-  host: 'localhost',
-  port: 3000
+  host: config.host,
+  port: config.port
 })
 
 server.route({
