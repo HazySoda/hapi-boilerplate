@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const { paginationDefine } = require('../utils/router-helper')
+const { paginationDefine, jwtAuthDefine } = require('../utils/router-helper')
 
 module.exports = [
   {
@@ -8,7 +8,8 @@ module.exports = [
     config: {
       tags: ['api', 'test'],
       description: '测试连接',
-      notes: '测试连接'
+      notes: '测试连接',
+      auth: false
     },
     handler: async (request, h) => {
       return 'Hello Hapi!'
@@ -21,6 +22,7 @@ module.exports = [
       tags: ['api', 'test'],
       description: '测试动态路由',
       notes: '测试动态路由',
+      auth: false,
       validate: {
         params: {
           name: Joi.string().required().description('name')
@@ -42,7 +44,8 @@ module.exports = [
       validate: {
         query: {
           ...paginationDefine
-        }
+        },
+        ...jwtAuthDefine
       }
     },
     handler: async (request, h) => {
@@ -73,6 +76,7 @@ module.exports = [
       tags: ['api', 'test'],
       description: '测试POST',
       notes: '测试POST',
+      auth: false,
       validate: {
         payload: {
           name: Joi.string().required().description('name')

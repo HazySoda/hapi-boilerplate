@@ -6,6 +6,13 @@ const paginationDefine = {
   pagination: Joi.boolean().default(true).description('是否开启分页')
 }
 
+const jwtAuthDefine = {
+  headers: Joi.object({
+    authorization: Joi.string().required()
+  }).unknown()
+}
+
 module.exports = {
-  paginationDefine
+  paginationDefine,
+  jwtAuthDefine
 }

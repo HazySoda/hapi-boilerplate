@@ -21,5 +21,8 @@ module.exports = {
     username: env.MYSQL_USERNAME,
     password: env.MYSQL_PASSWORD,
     database: env.MYSQL_DB_NAME
+  },
+  secret: {
+    JWT: env.JWT_SECRET
   }
 }

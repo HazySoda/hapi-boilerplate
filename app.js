@@ -3,6 +3,7 @@ const Hapi = require('hapi')
 const Boom = require('boom')
 const config = require('./config')
 const plugins = require('./plugins')
+const pluginHapiAuthJWT2 = require('./plugins/hapi-auth-jwt2')
 
 const server = Hapi.server({
   host: config.host,
@@ -28,6 +29,7 @@ server.rules(rules => {
 
 const init = async () => {
   await server.register(plugins)
+  pluginHapiAuthJWT2(server)
   await server.start()
 }
 
