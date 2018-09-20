@@ -4,6 +4,10 @@ module.exports = [
     path: '/',
     handler: async (request, h) => {
       return 'Hello Hapi!'
+    },
+    config: {
+      tags: ['api', 'test'],
+      description: '测试连接'
     }
   },
   {
@@ -12,6 +16,10 @@ module.exports = [
     handler: async (request, h) => {
       const { name } = request.params
       return `Hello ${encodeURIComponent(name)}!`
+    },
+    config: {
+      tags: ['api', 'test'],
+      description: '测试动态路由'
     }
   }
 ]

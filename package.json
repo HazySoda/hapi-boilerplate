@@ -37,9 +37,12 @@
     "env2": "^2.2.2",
     "hapi": "^17.5.4",
     "hapi-router": "^4.0.0",
+    "hapi-swagger": "^9.1.1",
+    "inert": "^5.1.0",
     "laabr": "^3.1.6",
     "mysql2": "^1.6.1",
-    "sequelize": "^4.38.1"
+    "sequelize": "^4.38.1",
+    "vision": "^5.4.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
