@@ -1,4 +1,5 @@
 const Joi = require('joi')
+const { paginationDefine } = require('../utils/router-helper')
 
 module.exports = [
   {
@@ -29,6 +30,40 @@ module.exports = [
     handler: async (request, h) => {
       const { name } = request.params
       return `Hello ${encodeURIComponent(name)}!`
+    }
+  },
+  {
+    method: 'GET',
+    path: '/pagination',
+    config: {
+      tags: ['api', 'test'],
+      description: '测试分页',
+      notes: '测试分页',
+      validate: {
+        query: {
+          ...paginationDefine
+        }
+      }
+    },
+    handler: async (request, h) => {
+      const mockData = [
+        {
+          id: 0,
+          name: '0'
+        },
+        {
+          id: 1,
+          name: '1'
+        },
+        {
+          id: 2,
+          name: '2'
+        }
+      ]
+      return h.paginate({
+        data: mockData,
+        foo: 'bar'
+      }, mockData.length, { key: 'data' })
     }
   },
   {

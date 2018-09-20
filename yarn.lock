@@ -1377,6 +1377,15 @@ handlebars@^4.0.11:
   optionalDependencies:
     uglify-js "^3.1.4"
 
+hapi-pagination@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/hapi-pagination/-/hapi-pagination-2.0.1.tgz#aef33ec4510257612a0b9be3855f77aa6a9635a3"
+  dependencies:
+    boom "^7.1.1"
+    hapi "^17.1.1"
+    hoek "^5.0.2"
+    joi "^13.0.2"
+
 hapi-pino@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/hapi-pino/-/hapi-pino-3.4.0.tgz#5e78ef4b05c9031744e50fec984f278a653c5cad"
@@ -1404,7 +1413,7 @@ hapi-swagger@^9.1.1:
     json-schema-ref-parser "^4.1.0"
     swagger-parser "^4.0.2"
 
-hapi@^17.5.4:
+hapi@^17.1.1, hapi@^17.5.4:
   version "17.5.4"
   resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.5.4.tgz#f3c1070f9ee398d9c6ad8ebc5abf180f13914f3c"
   dependencies:
@@ -1481,7 +1490,7 @@ heavy@6.x.x:
     hoek "5.x.x"
     joi "13.x.x"
 
-hoek@5.x.x, hoek@^5.0.3:
+hoek@5.x.x, hoek@^5.0.2, hoek@^5.0.3:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-5.0.4.tgz#0f7fa270a1cafeb364a4b2ddfaa33f864e4157da"
 
@@ -1858,7 +1867,7 @@ jest-validate@^23.5.0:
     leven "^2.1.0"
     pretty-format "^23.6.0"
 
-joi@13.x.x, joi@^13.1.2, joi@^13.3.0, joi@^13.6.0:
+joi@13.x.x, joi@^13.0.2, joi@^13.1.2, joi@^13.3.0, joi@^13.6.0:
   version "13.6.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-13.6.0.tgz#877d820e3ad688a49c32421ffefc746bfbe2d0a0"
   dependencies:

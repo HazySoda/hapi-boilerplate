@@ -37,6 +37,7 @@
     "boom": "^7.2.0",
     "env2": "^2.2.2",
     "hapi": "^17.5.4",
+    "hapi-pagination": "^2.0.1",
     "hapi-router": "^4.0.0",
     "hapi-swagger": "^9.1.1",
     "inert": "^5.1.0",
