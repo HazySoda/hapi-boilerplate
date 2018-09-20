@@ -6,7 +6,8 @@ module.exports = [
     path: '/',
     config: {
       tags: ['api', 'test'],
-      description: '测试连接'
+      description: '测试连接',
+      notes: '测试连接'
     },
     handler: async (request, h) => {
       return 'Hello Hapi!'
@@ -18,6 +19,7 @@ module.exports = [
     config: {
       tags: ['api', 'test'],
       description: '测试动态路由',
+      notes: '测试动态路由',
       validate: {
         params: {
           name: Joi.string().required().description('name')
@@ -35,6 +37,7 @@ module.exports = [
     config: {
       tags: ['api', 'test'],
       description: '测试POST',
+      notes: '测试POST',
       validate: {
         payload: {
           name: Joi.string().required().description('name')
