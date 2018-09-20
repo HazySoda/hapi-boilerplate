@@ -5,6 +5,7 @@ const pluginLaabr = require('./laabr')
 const pluginHapiRouter = require('./hapi-router')
 const pluginHapiSwagger = require('./hapi-swagger')
 const pluginHapiPagination = require('./hapi-pagination')
+const pluginHapiGood = require('./hapi-good')
 
 module.exports = [
   inert,
@@ -13,5 +14,6 @@ module.exports = [
   pluginLaabr,
   pluginHapiRouter,
   pluginHapiSwagger,
-  pluginHapiPagination
+  pluginHapiPagination,
+  pluginHapiGood
 ]
